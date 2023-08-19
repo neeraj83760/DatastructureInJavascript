@@ -1,0 +1,39 @@
+Memoization Recipe 
+
+1. Go with the brute force approach 
+2. then implement the same code using Memoization Strategy 
+
+
+Tabulation Recipe
+
+1.  Visualize the problem as a table
+2.  size the table based on the inputs 
+3.  intialize the table with default values 
+4.  seed the trivial answer into the table
+5.  iterating through the table
+6.  fill further positions based on the current position
+
+
+
+When to use Recursion vs Iteration?
+
+The most common question that haunts most programmers is when to use recursion and when to use iteration. To be honest most codes can be written with both, iteration and recursion. However, recursion is intuitive for many situations, whereas iteration is quite tough for others. This is common when dealing with items that have a complex nested list structure. But we will try to lay out some guidelines to help you decide which approach we best for the problem you are solving.
+
+Iteration code can become tricky and hard to interpret when solving complex problems. A good code constitutes one that can be easily be understood by other programmers and easy to decode. To understand this a little better, use both a recursive and iterative strategy to build any Tree traversals such as pre-order, in-order, or post-order. It is true that writing the iterative counterpart for this type of problem is difficult since it requires the use of an explicit stack or queue.
+
+When expressed iteratively, a method that can naturally be expressed recursively (such as the Nth Fibonacci number, trees, or graph traversals) may not be as straightforward to understand. Converting a recursive algorithm to an iterative algorithm can be tricky, as can verifying that the two algorithms are similar. 
+
+For issues that can be broken down into several, smaller pieces, recursion is far superior to iteration. Using recursion in the divide and conquer method can minimize the size of your problem at each step and take less time than a naive iterative approach. It is frequently more 'elegant' to use recursion than iterative solutions because it is easier to implement.
+
+Simply put, if you notice a pattern in your problem, you should use recursion. for example Fibonacci, tree, and graph questions. Also, recursion uses more memory but is sometimes clearer and more readable. Using loops increases the performance, but recursion can sometimes be better for the programmer
+
+So, we would suggest that go with the approach that seems intuitive, not too complex, and easily convey your thought process. However, when performance and efficiency need to be considered, then choose accordingly. So in summary:
+
+1.Recursive functions are often slower than iterative functions. So, if speed is a concern, iteration is usually used.
+
+2.If the stack limit is too restrictive, iteration will be preferred over recursion.
+
+3.Some methods are almost unmanageable iteratively but are quite naturally programmed recursively. The choice is apparent in this case.
+
+Conclusion
+Iteration and Recursion form the basic building blocks of programming and without them, one cannot solve complex problems. In this article, we have just briefed you about both the terms and laid out the difference between them. To have a deeper dive into recursion, you can read Recursion in c++. Various algorithms can be implemented in an iterative and recursive manner. By the end of this article, we want you to take away this final thought: Iteration means loop and recursion means function calling itself.
