@@ -1,5 +1,10 @@
 /* Grid Traveller probelm
 
+Say that u are a traveller on 2d grid. You begin in the top-left corner and your goal is
+to travel to the bottom-right corner. You may only move down or right 
+
+In how many ways can you travel to the goal on a grid with dimensions m * n; 
+
 Given a grid of size m * n, let us assume you are starting at (1, 1) and your goal is to reach (m, n). At any instance, if you are on (x, y), you can either go to (x, y + 1) or (x + 1, y).
 Now consider if some obstacles are added to the grids. How many unique paths would there be?
 
