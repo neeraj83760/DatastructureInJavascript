@@ -1,4 +1,11 @@
-Memoization Recipe 
+
+Keypoint : Memoization in heavliy used in Javascript for caching and to improve the performace 
+of the application or a program . example : when u make network calls using fetch API 
+their memoization is also use to reduce the bunch of network calls 
+
+Memoization Recipe  
+
+
 
 1. Go with the brute force approach 
 2. then implement the same code using Memoization Strategy 
