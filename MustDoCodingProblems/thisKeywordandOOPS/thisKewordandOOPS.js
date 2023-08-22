@@ -98,4 +98,6 @@ console.log(nodeData.hasOwnProperty('type'));
 
 //   ******************* Prototypcal Inheritance on builtin Objects***************************
 
-//  
+//  Try to move up the prototypical chain and check what we get
+
+console.log("Latest console state NodeData2", nodeData2)
