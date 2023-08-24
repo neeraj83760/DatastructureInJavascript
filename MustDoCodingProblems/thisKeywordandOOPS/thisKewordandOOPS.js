@@ -101,3 +101,93 @@ console.log(nodeData.hasOwnProperty('type'));
 //  Try to move up the prototypical chain and check what we get
 
 console.log("Latest console state NodeData2", nodeData2)
+
+// Object.prototype is the top of the scope chain 
+console.log("prototypical chain", nodeData2.__proto__.__proto__); // its a prototype property of an Object
+
+// one level up of the Object.prototype scope chain gives null coz there is nothing above it 
+console.log("prototypical chain one level up", nodeData2.__proto__.__proto__.__proto__) // null 
+
+console.log(Node.prototype.constructor) // Node prototype has a constructor property which points back
+// to the Node itself
+
+// for inspecting a function we can write console.dir for example
+// constructor property points back to Node function 
+console.dir(Node.prototype.constructor);
+
+
+
+// ***************************Prototype of an Array and its prototype chain **************************
+
+const arr = [23,1,4,55, 21,9, 1, 9, 9, 4]  // new Array === []
+// Array is a constructor function, arr is the object created by the Array constuctor function  
+console.log(arr.__proto__=== Array.prototype);
+
+console.log(arr.__proto__.__proto__); // prototype property of an Object    
+
+console.log(arr.__proto__.__proto__.__proto__); // null 
+
+// Creating our new method with in the Array prototype .. this method will be
+// available to all the arrt
+
+Array.prototype.unique = function(){
+
+return [...new Set(this)]
+}
+
+
+console.log(arr.unique()); // however this is not a good practice of creating funcion inside Array.prototype
+
+
+
+// ********************* Prototypical Inheritance is also happens in DOM elements ********************
+
+const h1 =  document.querySelector('h1');
+
+console.log(h1); // this will tell about h1 element but for more details we will use console.dir
+
+console.dir(h1) // h1 prototype is HTMLHeadingElement and its prototype is HTMLElement and 
+// HTMLElement prototype is Element .... Element prototype is Node .... and Node prtotype is 
+// EventTarget  .... EventTarget prototype is prototype property of an Object Constructor 
+
+
+console.log(h1.__proto__); // HTMLHeadingElement 
+console.log(h1.__proto__.__proto__); // HTMLElement
+console.log(h1.__proto__.__proto__.__proto__); // Element 
+console.log(h1.__proto__.__proto__.__proto__.__proto__) // Node
+console.log(h1.__proto__.__proto__.__proto__.__proto__.__proto__) // EventTarget
+console.log(h1.__proto__.__proto__.__proto__.__proto__.__proto__.__proto__) // Object 
+console.log(h1.__proto__.__proto__.__proto__.__proto__.__proto__.__proto__.__proto__) // null
+
+
+//  ****************************Function Prototypes *******************
+
+// function itself is an Object so it also has a prototype  
+
+function print(){
+
+    console.log('Hi! How are you?') 
+}
+
+console.dir(print); 
+
+// ****************ES6 Classes****************************************
+
+// Like construtor functions calsses also have class declaration and calss expressions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
