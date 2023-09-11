@@ -10,7 +10,36 @@ tabhi assign hoti hai jab function actually call ho for more details check the a
 4. this never points to a function itself and not it's variable enviournment 
 
 */ 
+/* 
 
+chai with code ka example :  this current context(variables) ko point karta hai, context ka
+matlab kiske baare me baat ho rahi hai 
+
+const user = {
+    username: "hitesh",
+    price: 999,
+
+    welcomeMessage: function() {
+        console.log(`${this.username} , welcome to website`);
+        console.log(this);
+    }
+
+}
+
+user.welcomeMessage() // Yaha tak hitesh ki baat ho rahi thi 
+user.username = "sam" // but is line me humine context change kar diya 
+user.welcomeMessage() // to ye function ab sam, welcome to website  print karega
+
+
+Also context function ke andar work nahi karta 
+
+funtion chai(){
+
+    
+}
+
+    
+*/ 
 /*
 
 What Happens when u call a function with new operator?

@@ -1,6 +1,7 @@
 class Node{
 
     constructor(val){
+        
         this.prev = null;       
         this.val = val;
         this.next = null;
@@ -30,9 +31,10 @@ class CircularLinklist{
 
             temp = new Node(val);
             temp.next = this.last.next;
-
-
-            this.last.next = temp; 
+            this.last.next = temp;
+            temp.prev = this.last;
+            this.last = temp;
+            
 
         }
 
@@ -45,18 +47,20 @@ class CircularLinklist{
 
             else{
 
-                let curr = this.last; 
+                let curr = this.last.next; 
 
 
-                do{
-                
+                while(curr !== this.last) 
+                {
                     console.log(curr.val);
                     curr = curr.next;
+                }
+            
+                console.log(curr.val);
 
-                }while(curr.next !== this.last); 
+                
             }
 
-            
         }
     }
 

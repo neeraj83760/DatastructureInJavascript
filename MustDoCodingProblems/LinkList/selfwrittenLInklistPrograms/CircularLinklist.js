@@ -32,7 +32,8 @@ class CircularLinklist{
             
 
             // root node ka next me new node ka address   
-            this.last.next = temp;   
+            this.last.next = temp;
+            this.last = temp;   
             }
 
         }
@@ -43,14 +44,16 @@ class CircularLinklist{
 
             else{
 
-                let curr = this.last;
+                let curr = this.last.next;
 
-                do
+                while(curr !== this.last)
                 {
                 console.log(curr.val)
                 curr = curr.next; 
-
-                } while(curr.next !== this.last)
+                }
+                
+                console.log(curr.val); 
+                
             }
         }
 

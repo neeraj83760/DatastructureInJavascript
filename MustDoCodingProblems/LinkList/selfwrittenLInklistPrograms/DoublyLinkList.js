@@ -43,13 +43,13 @@ class DoublyLinkList{
             curr = curr.next; 
         }
 
-        //console.log("*************After reversing the Link List ****************") 
+        console.log("*************After reversing the Link List ****************") 
 
-        // while(reverseLinkListVar!==null){
+        while(reverseLinkListVar!==null){
 
-        //     console.log(reverseLinkListVar.val);
-        //     reverseLinkListVar = reverseLinkListVar.prev; 
-        // }
+            console.log(reverseLinkListVar.val);
+            reverseLinkListVar = reverseLinkListVar.prev; 
+        }
     }
     
     DeletionInDoublyLinkList(value){
